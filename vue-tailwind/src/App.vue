@@ -194,7 +194,47 @@
         </div>
       </div>
     </section>
-    <section id="4" class="bg-blue-500"></section>
+
+    <section id="5" class="bg-gray-200 relative">
+      <div
+        class="absolute bottom-0 inset-x-0 h-32 bg-gradient-to-b from-gray-200 to-gray-700"
+      ></div>
+      <div class="container mx-auto px-8 pb-32">
+        <div class="relative leading-loose mb-16 lg:mb-32">
+          <h2 class="text-3xl lg:text-5xl text-center text-gray-800">
+            {{ header_what_build }}
+          </h2>
+          <p class="text-center lg:text-xl text-gray-800">
+            {{ text_what_build }}
+          </p>
+        </div>
+
+        <div class="lg:grid grid-cols-3 gap-10 space-y-6 lg:space-y-0">
+          <div v-for="item in smile_content" :key="item.button">
+            <Smile :button="item.button" :baseStyles="item.baseStyles" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="6" class="bg-gray-700 relative pb-20">
+      <div class="container mx-auto px-8">
+        <h2 class="text-3xl text-center font-bold text-gray-300 pt-8 mb-12">
+          {{ faq }}
+        </h2>
+        <div class="lg:grid grid-cols-2 gap-8 space-y-6 lg:space-y-0">
+          <div v-for="item in faq_content" :key="item.faq_header">
+            <Faq
+              :faq_header="item.faq_header"
+              :faq_body="item.faq_body"
+              :color1="item.color1"
+              :color2="item.color2"
+              :color1_text="item.color1_text"
+              :color2_text="item.color2_text"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </template>
 
@@ -202,6 +242,8 @@
 import Link from "./components/Link";
 import Textlist from "./components/Textlist";
 import Card from "./components/Card";
+import Smile from "./components/Smile";
+import Faq from "./components/Faq";
 
 export default {
   name: "App",
@@ -209,6 +251,8 @@ export default {
     Link,
     Textlist,
     Card,
+    Smile,
+    Faq,
   },
 
   data() {
@@ -230,6 +274,10 @@ export default {
       video_text_p2: "Traversy Media ",
       video_text_p3: "on YouTube also.",
       header_what_learn: "What you'll learn in this course",
+      header_what_build: "What we'll build in this course",
+      text_what_build:
+        "These components are things you'll have to create in every project",
+      faq: "Frequently Asked Questions",
 
       items: [
         {
@@ -322,6 +370,193 @@ export default {
           header: "Why Guiltywild is different",
           body:
             "To be completely honest, I didn't like Guiltywild at first. It felt like inline styles to me (and maybe still does). After using it more and more though, I've come to I dread jumping into a project without Guiltywild now.",
+        },
+      ],
+
+      smile_content: [
+        {
+          button: "Buttons",
+          baseStyles: {
+            background: "red",
+          },
+        },
+        {
+          button: "Cards",
+          baseStyles: {
+            background: "blue",
+          },
+        },
+
+        {
+          button: "Forms",
+          baseStyles: {
+            background: "green",
+          },
+        },
+        {
+          button: "Header",
+          baseStyles: {
+            background: "teal",
+          },
+        },
+
+        {
+          button: "Navigation",
+          baseStyles: {
+            background: "yellow",
+          },
+        },
+        {
+          button: "Hero",
+          baseStyles: {
+            background: "orange",
+          },
+        },
+
+        {
+          button: "Grids",
+          baseStyles: {
+            background: "purple",
+            opacity: "0.5",
+          },
+        },
+        {
+          button: "Newsletter",
+          baseStyles: {
+            background: "rgba(50, 60, 70, 0.5)",
+          },
+        },
+
+        {
+          button: "Pricing Section",
+          baseStyles: {
+            background: "rgba(150, 0, 170, 0.5)",
+          },
+        },
+
+        {
+          button: "Pricing Section",
+          baseStyles: {
+            background: "rgba(210, 0, 0, 0.5)",
+          },
+        },
+
+        {
+          button: "Parcel.js Setup",
+          baseStyles: {
+            background: "#fcba03",
+          },
+        },
+        {
+          button: "Responsive",
+          baseStyles: {
+            background: "hsl(0, 100%, 50%)",
+          },
+        },
+      ],
+      faq_content: [
+        {
+          faq_header: "How to use Guiltywild classes",
+          faq_body:
+            "There's a certain process to designing with Guiltywild that we'll take to make our designs look good. Some easy to remember rules are all it takes to get a good design. We'll also talk about ideas and action items to",
+
+          color1_text: " There's a certain color1",
+          color2_text: " There's a certain color2",
+
+          color1: {
+            color: "yellow",
+          },
+          color2: {
+            color: "orange",
+          },
+        },
+        {
+          faq_header: "Is there course support?",
+          faq_body:
+            "You can email me directly at any time and we also have a Discord community where you gain exclusive channel access.",
+          color1: {
+            color: "blue",
+          },
+          color2: {
+            color: "green",
+          },
+          color1_text: " There's a certain color1",
+          color2_text: " There's a certain color2",
+        },
+        {
+          faq_header: "Can I use the code in my own projects?",
+          faq_body:
+            "Definitely! All of the code in this course is yours to use in your sites, apps, projects, whatever.",
+
+          color1_text: " There's a certain color1",
+          color2_text: " There's a certain color2",
+          color1: {
+            color: "teal",
+          },
+          color2: {
+            color: "purple",
+          },
+        },
+
+        {
+          faq_header: "What if I don't like it?",
+          faq_body: "",
+
+          color1_text:
+            "There's a certain process to designing with Guiltywild that we'll take to make our designs look good. Some easy to remember rules are all it takes to get a good design. We'll also talk about ideas and action items to",
+          color2_text: "",
+
+          color1: {
+            color: "Orange",
+          },
+          color2: {
+            color: "purple",
+          },
+        },
+        {
+          faq_header: "How do I login and view the course?",
+          faq_body: "",
+
+          color1_text:
+            "There's a certain process to designing with Guiltywild that we'll take to make our designs look good. ",
+          color2_text:
+            "Some easy to remember rules are all it takes to get a good design. We'll also talk about ideas and action items to",
+          color1: {
+            color: "Orange",
+          },
+          color2: {
+            color: "yellow",
+          },
+        },
+        {
+          faq_header: "Is there a student discount?",
+          faq_body:
+            "Yup! 50% off! Email me at hey@chrisoncode.io with your student id and I'll send you a discount code.",
+
+          color1_text:
+            " There's a certain process to designing with Guiltywild that we'll take to make our designs look good. ",
+          color2_text:
+            "Some easy to remember rules are all it takes to get a good design. We'll also talk about ideas and action items to",
+          color1: {
+            color: "Orange",
+          },
+          color2: {
+            color: "gray-0.5",
+          },
+        },
+        {
+          faq_header: "Is there an affiliate program?",
+          faq_body:
+            "Yup! You get 50% of every sale that you bring in. You can sign up for a course and turn on affiliate mode from your dashboard at learn.chrisoncode.io. Or you can email me at ",
+          color1_text: "hey@chrisoncode.io.",
+          color2_text: " Drop me an email at hey@chrisoncode.io. Let's chat.",
+
+          color1: {
+            color: "#1E90FF	",
+          },
+          color2: {
+            color: "white",
+          },
         },
       ],
     };
