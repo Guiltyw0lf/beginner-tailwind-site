@@ -1,32 +1,10 @@
 <template>
   <body>
     <section id="1" class="relative bg-gradient-to-r from-blue-100 to-red-200">
-      <div class="relative">
+      <div class="overflow-hidden">
         <div
           class="relative leading-snug container flex justify-between mx-auto px-8 py-6"
         >
-          <div class="absolute bottom-0 right-0">
-            <div
-              class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 lg:mt-6 rounded-full bg-gradient-to-br from-teal-200 to-teal-300 opacity-75 transition duration-1000 transform hover:-translate-x-64"
-            ></div>
-
-            <div
-              class="cursor-pointer absolute w-6 h-6 lg:w-20 lg:h-20 mt-8 ml-10 lg:mt-0 lg:ml-12 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 opacity-75 transition duration-1000 transform hover:-translate-y-64"
-            ></div>
-            <div
-              class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 lg:mt-6 ml-24 rounded-full bg-gradient-to-br from-red-200 to-red-300 opacity-75 transition duration-1000 transform hover:translate-x-64"
-            ></div>
-
-            <div
-              class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 rounded-full lg:mt-20 bg-gradient-to-br from-blue-200 to-teal-300 opacity-75 transition duration-1000 transform hover:-translate-x-64 hover:translate-y-64"
-            ></div>
-            <div
-              class="cursor-pointer absolute w-6 h-6 lg:w-20 lg:h-20 mt-8 ml-10 lg:mt-24 lg:ml-12 rounded-full bg-gradient-to-br from-green-200 to-green-300 opacity-75 transition duration-1000 transform hover:translate-y-64"
-            ></div>
-            <div
-              class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 ml-24 rounded-full lg:mt-20 bg-gradient-to-br from-orange-200 to-orange-300 opacity-75 transition duration-1000 transform hover:translate-x-64 hover:translate-y-64"
-            ></div>
-          </div>
           <a
             href="#"
             class="text-blue-900 text-4xl font-bold relative items-center"
@@ -79,6 +57,31 @@
             </div>
           </div>
         </div>
+
+        <div
+          class="absolute bottom-0 right-0 transform hidden lg:block -translate-x-64 -translate-y-64"
+        >
+          <div
+            class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 lg:mt-6 rounded-full bg-gradient-to-br from-teal-200 to-teal-300 opacity-75 transition duration-1000 transform hover:-translate-x-64"
+          ></div>
+
+          <div
+            class="cursor-pointer absolute w-6 h-6 lg:w-20 lg:h-20 mt-8 ml-10 lg:mt-0 lg:ml-12 rounded-full bg-gradient-to-br from-purple-200 to-purple-300 opacity-75 transition duration-1000 transform hover:-translate-y-64"
+          ></div>
+          <div
+            class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 lg:mt-6 ml-24 rounded-full bg-gradient-to-br from-red-200 to-red-300 opacity-75 transition duration-1000 transform hover:translate-x-64"
+          ></div>
+
+          <div
+            class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 rounded-full lg:mt-20 bg-gradient-to-br from-blue-200 to-teal-300 opacity-75 transition duration-1000 transform hover:-translate-x-64 hover:translate-y-64"
+          ></div>
+          <div
+            class="cursor-pointer absolute w-6 h-6 lg:w-20 lg:h-20 mt-8 ml-10 lg:mt-24 lg:ml-12 rounded-full bg-gradient-to-br from-green-200 to-green-300 opacity-75 transition duration-1000 transform hover:translate-y-64"
+          ></div>
+          <div
+            class="cursor-pointer absolute w-10 h-10 lg:w-20 lg:h-20 ml-24 rounded-full lg:mt-20 bg-gradient-to-br from-orange-200 to-orange-300 opacity-75 transition duration-1000 transform hover:translate-x-64 hover:translate-y-64"
+          ></div>
+        </div>
       </div>
     </section>
 
@@ -121,7 +124,7 @@
               <p class="p-8">
                 {{ video_text_l1 }}
                 <a
-                  href="https://scotch.io/tutorials/get-started-with-Guiltywild-css-in-15-minutes"
+                  href="https://scotch.io//"
                   class="text-yellow-500 hover:underline"
                   >{{ video_text_l2 }}</a
                 >
@@ -257,7 +260,7 @@ export default {
 
   data() {
     return {
-      app_title: "Jak linkovat s prochorovim WD",
+      app_title: "Jak linkovat s prochorovym WD",
       app_title2:
         "Tento kurz je specialne zameren na likovaci fazi, mid game a late game, kdyz mate ve hre Prochora a jeho signature Witch Doctor",
       button_learn: "Sleduj video a pochopis proc...",
